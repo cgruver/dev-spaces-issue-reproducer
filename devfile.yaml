@@ -7,5 +7,8 @@ components:
 - name: dev-tools
   container:
     image: registry.access.redhat.com/ubi9-minimal
+    args:
+      - '-f'
+      - "/dev/null"
     command:
-      - "tail -f /dev/null"
+      - /usr/bin/tail
